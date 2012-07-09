@@ -17,12 +17,12 @@ a simple timing-wheel timer, use double list.
 
 ##use
 - create a wheels, wheel_size is 60 slot, granularity is 200ms.
-- add three time event into wheels.
-- start timer
-
 >Tw *tw = init(60, 200);
-add(tw, 1000, 2000, a1, (void*)1, Repeat); 
-add(tw, 100000, 200000, a1, (void*)2, Once); 
-add(tw, 0, 10000, p1, tw, Repeat); 
-start(tw);
+- add three time event into wheels.
+>add(tw, 1000, 2000, a1, (void*)1, Repeat); 
+>add(tw, 100000, 200000, a1, (void*)2, Once); 
+>add(tw, 0, 10000, p1, tw, Repeat); 
+
+- start timer
+>start(tw);
 
