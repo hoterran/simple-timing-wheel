@@ -16,9 +16,9 @@ a simple timing-wheel timer, use double list.
 - Once: this task just execute once.
 
 ##use
-create a wheels, wheel_size is 60 slot, granularity is 200ms.
-add three time event into wheels.
-start timer
+- create a wheels, wheel_size is 60 slot, granularity is 200ms.
+- add three time event into wheels.
+- start timer
 
 >Tw *tw = init(60, 200);
 add(tw, 1000, 2000, a1, (void*)1, Repeat); 
