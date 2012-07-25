@@ -40,7 +40,7 @@ Task* add(Tw *tw, int first, int interval, fp func, void* arg, enum Task_Type tt
     Task *task = malloc(sizeof(*task));
 
     int index = (tw->index + (first / tw->granularity)) % tw->wheels_size;
-    int rotation_count = (tw->index + (first / tw->granularity)) / tw->wheels_size;
+    int rotation_count = tw->rotation_count + ((tw->index + (first / tw->granularity)) / tw->wheels_size);
 
     task->tt = tt;
     task->first = first;
